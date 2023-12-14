@@ -15,6 +15,7 @@ import { Introduction } from "@/components/introduction";
 import { Menu } from "@/components/menu";
 import { GitHubLink } from "@/components/githubLink";
 import { Meta } from "@/components/meta";
+import testmaps2 from './202401_horuto_map4F.jpg'
 
 export default function Home() {
   const { viewer } = useContext(ViewerContext);
@@ -162,6 +163,33 @@ export default function Home() {
             const currentAssistantMessage = sentences.join(" ");
             handleSpeakAi(aiTalks[0], () => {
               setAssistantMessage(currentAssistantMessage);
+
+              // =============  つる -Mod ここから- ======================             
+              //alert("Hello TypeScript")              
+              let index2 = currentAssistantMessage.indexOf('開場')
+              alert(index2) 
+              if (index2 != -1){
+                // 画像を表示
+                const imageElement = new Image();
+                // testmapsを画像のパスに変換
+                imageElement.src = testmaps2.src;
+
+                // 画像の表示位置を指定
+                imageElement.style.position = 'absolute';
+                imageElement.style.left = '1000px'; // 任意のX座標を指定
+                imageElement.style.top = '100px';  // 任意のY座標を指定
+
+                document.body.appendChild(imageElement);    
+
+                // 10秒後に画像を非表示にする
+                setTimeout(() => {
+                  imageElement.style.display = 'none'; // または imageElement.style.visibility = 'hidden';
+                }, 10000); // 10000ミリ秒＝10秒
+
+              }
+              // =============  つる -Mod ここから- ======================       
+
+              
             });
           }
         }

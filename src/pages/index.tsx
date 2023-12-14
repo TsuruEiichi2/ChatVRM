@@ -166,8 +166,8 @@ export default function Home() {
 
               // =============  つる -Mod ここから- ======================             
               //alert("Hello TypeScript")              
-              let index2 = currentAssistantMessage.indexOf('開場')
-              alert(index2) 
+              let index2 = currentAssistantMessage.indexOf('ホルトホール')
+              //alert(index2) 
               if (index2 != -1){
                 // 画像を表示
                 const imageElement = new Image();

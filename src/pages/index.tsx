@@ -165,6 +165,7 @@ export default function Home() {
               setAssistantMessage(currentAssistantMessage);
 
               // =============  つる -Mod ここから- ======================             
+              alert(process.env.koekey)
               //alert("Hello TypeScript")              
               let index2 = currentAssistantMessage.indexOf('ホルトホール')
               //alert(index2) 
@@ -187,7 +188,7 @@ export default function Home() {
                 }, 10000); // 10000ミリ秒＝10秒
 
               }
-              // =============  つる -Mod ここから- ======================       
+              // =============  つる -Mod ここまで- ======================       
 
               
             });
